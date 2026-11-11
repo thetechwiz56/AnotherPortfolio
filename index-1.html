@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="gb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahumuza Tony Bills | Player 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-1.css">
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="script-1.js" defer></script>
+</head>
+<body>
+    <div id="boot" role="dialog" aria-label="Start screen">
+        <p class="l1">BOOTING PORTFOLIO.EXE...</p>
+        <p class="l2">MEMORY OK</p>
+        <p class="l3">LOADING PLAYER 1... 100%</p>
+        <button id="start" type="button">PRESS START</button>
+    </div>
+
+    <div class="hud">
+        <span>SCORE <b id="score">000000</b></span>
+        <span>COINS <b id="coins">0/5</b></span>
+        <span id="lives" aria-label="Lives">♥♥♥</span>
+        <a href="#player">HOME</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#quests">QUESTS</a>
+         <a href="#contact">CONTACT</a>
+        <button id="snd" type="button">SND OFF</button>
+        <button id="pal" type="button">PAL</button>
+        <button id="exit" type="button">EXIT</button>
+
+    </div>
+
+    <main>
+        <section id="player" class="player">
+            <svg id="hero" viewBox="0 0 8 10" shape-rendering="crispEdges" role="img" aria-label="Pixel avatar. Tap to jump"></svg>
+            <div>
+                <p class="tag">PLAYER 1</p>
+                <h1>AHUMUZA<br>TONY BILLS</h1>
+                <p>Developer. Web + .NET.</p>
+                <div class="stat"><span>HP</span><i style="--v:90%"></i></div>
+                <div class="stat"><span>XP</span><i style="--v:60%"></i></div>
+                <p><a class="btn" href="#quests">START QUEST</a></p>
+            </div>
+        </section>
+     
+        <div class="dialog" id="dialog">
+    <p class="who">PLAYER 1</p>
+    <p id="dtext"></p>
+    <span class="next">▼</span>
+</div>
+
+        
+        <section id="skills" data-reveal>
+            <h2>SKILLS</h2>
+            <ul id="skill-list"></ul>
+        </section>
+
+        <section id="inventory" data-reveal>
+    <h2>INVENTORY</h2>
+    <div id="inv"></div>
+    <p id="invtip">TAP AN ITEM</p>
+</section>
+
+
+        
+        <section id="quests" data-reveal>
+            <h2>QUESTS</h2>
+            <div class="carts">
+                <article class="cart"><p class="st done">COMPLETE</p><h3>QUEST 01</h3><p>This portfolio</p></article>
+                <article class="cart"><p class="st">IN PROGRESS</p><h3>QUEST 02</h3><p>Sem 3 group project<br>ASP.NET MVC</p></article>
+                <article class="cart lock"><p class="st">LOCKED</p><h3>QUEST 03</h3><p>???</p></article>
+            </div>
+        </section>
+
+        <section id="contact" data-reveal>
+            <h2>CONTINUE?</h2>
+            <form id="form" novalidate>
+                <label>NAME <input name="n" type="text" required></label>
+                <label>EMAIL <input name="e" type="email" required></label>
+                <label>MESSAGE <textarea name="m" rows="3" required></textarea></label>
+                <button class="btn" type="submit">INSERT COIN ▶</button>
+                <p id="fmsg" role="status"></p>
+            </form>
+            <div class="links">
+                <a href="https://github.com/thetechwiz56" target="_blank" rel="noopener">GITHUB</a>
+                <a href="#" target="_blank" rel="noopener">LINKEDIN</a>
+                <a href="mailto:you@example.com">EMAIL</a>
+            </div>
+        </section>
+    </main>
+
+    <div id="toast" role="status"></div>
+    <footer>PLAYER 1 © <span id="yr">2026</span> · <a href="#player">REPLAY ↑</a></footer>
+</body>
+</html>
